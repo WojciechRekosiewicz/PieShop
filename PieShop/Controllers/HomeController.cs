@@ -14,7 +14,7 @@ namespace PieShop.Controllers
 
         public HomeController(IPieRepository pieRepository)
         {
-            pieRepository = _pieRepository;
+            _pieRepository = pieRepository;
         }
 
 
@@ -22,7 +22,10 @@ namespace PieShop.Controllers
         {
             ViewBag.Title = "Pie Title";
 
-            return View();
+
+            var pies = _pieRepository.GetAllPies().OrderBy(p => p.Name);
+
+            return View(pies);
         }
     }
 }
