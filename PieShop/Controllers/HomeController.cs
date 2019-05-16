@@ -20,6 +20,8 @@ namespace PieShop.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Title = "Pie Title";
+
             return View();
         }
     }
