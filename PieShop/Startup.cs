@@ -28,7 +28,10 @@ namespace PieShop
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
 
+
             services.AddTransient<IPieRepository, PieRepository>();
+            services.AddTransient<IFeedbackRepository, FeedbackRepository>();
+
 
             // DATA FOR MOCK
             //services.AddTransient<IPieRepository, MockPieRepository>();

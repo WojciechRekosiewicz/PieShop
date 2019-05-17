@@ -7,7 +7,7 @@ namespace PieShop.Models
 {
     public class Feedback
     {
-        public int FeddbackId { get; set; }
+        public int FeedbackId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string Message { get; set; }
