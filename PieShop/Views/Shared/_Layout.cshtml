@@ -14,6 +14,8 @@
                 <ul class="nav navbar-nav">
                     <li><a asp-controller="Home" asp-action="Index" class="navbar-brand">Super Pie Shop</a></li>
                     <li><a asp-controller="Feedback" asp-action="Index">Feedback</a></li>
+                    <partial name="_LoginPartial" />
+                   
 
                 </ul>
             </div>
@@ -26,6 +28,6 @@
             @RenderBody()
         </div>
     </div>
-
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
